@@ -1,0 +1,99 @@
+.info {
+    padding: 80px 0 57px;
+
+    @media (max-width: 1150px) {
+        padding: 40px 0;
+    }
+
+    &__content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+        gap: 24px;
+
+        &-title {
+            color: $text-first-color;
+            line-height: 120%;
+            font-weight: 500;
+            @include fontAdaptive(46, 24);
+            margin-bottom: 30px;
+
+            @media (min-width: 2560px) {
+                font-size: 46px;
+            }
+        }
+
+        &-txt {
+             color: $text-second-color;
+             @include fontAdaptive(18, 14);
+             line-height: 140%;
+             margin-bottom: 30px;
+
+             &:last-of-type {
+                margin-bottom: 60px;
+             }
+
+             @media (min-width: 2560px) {
+                font-size: 18px;
+             }
+        }
+
+        &-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 24px;
+        }
+
+        &-card {
+            @media (max-width: 815px) {
+                text-align: center;
+            }
+
+            @media (max-width: 557px) {
+                &:last-of-type {
+                    grid-column: 2 span;
+                }
+            }
+
+            @media (max-width: 480px) {
+                grid-column: 2 span;
+            }
+        }
+
+        &-num {
+            color: $text-first-color;
+            font-weight: 700;
+            @include fontAdaptive(46, 30);
+            display: inline-block;
+            margin-bottom: 10px;
+
+            @media (min-width: 2560px) {
+                font-size: 46px;
+            }
+        }
+
+        &-text {
+            line-height: 140%;
+            color: $text-second-color;
+        }
+
+        &-production {
+            text-align: center;
+        }
+
+        &-image {
+            border-radius: 5px;
+            margin-bottom: 12px;
+
+            @media (max-width: 1024px) {
+                height: 100%;
+                object-fit: cover;
+                object-position: 30%;
+            }
+        }
+        
+        &-span {
+            color: $text-third-color;
+            font-size: 14px;
+        }
+    }
+}

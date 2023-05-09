@@ -1,0 +1,9 @@
+$onest: ('Bold', 700),('Medium', 500),('Regular', 400),('Light', 300);
+
+@each $name, $weight in $onest {
+    @font-face {
+        src: url(../fonts/onest/Onest#{$name}.woff);
+        font-family: 'onest';
+        font-weight: $weight;
+    }
+}

@@ -1,0 +1,194 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'onest';
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    
+    &::-webkit-scrollbar {
+        background: #D9D9D9;
+        border-radius: 0px 5px 5px 0px;
+        width: 6px;
+        height: 2px;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+        border-radius: 0px 5px 5px 0px;
+        background: $primary-color-first;
+    }
+}
+
+$maxWidth: 1920;
+
+@mixin fontAdaptive($pcSize, $mobSize) {
+    $addSize: $pcSize - $mobSize;
+    $addMobSize: $addSize + $addSize * 0.7;
+
+    @media (max-width: 767px) {
+        font-size: calc(#{$mobSize + px} + #{$addMobSize} * ((100vw - 320px) / #{$maxWidth}));
+    }
+
+    @media (min-width: 767px) {
+        font-size: calc(#{$mobSize + px} + #{$addSize} * (100vw / #{$maxWidth}));
+    }
+}
+
+body {
+    background: url(https://generalamcentgroup.netlify.app/assets/grid.svg) center center $white-bg fixed;
+
+    &.hidden {
+        overflow: hidden;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: bottom;
+}
+
+iframe {
+    border: 0;
+}
+
+.container {
+    max-width: 1224px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 12px;
+}
+
+.title {
+    text-transform: uppercase;
+    color: $text-first-color;
+    @include fontAdaptive(58, 24);
+    line-height: 120%;
+    
+    span {
+        color: $primary-color-first;
+    }
+
+    @media (max-width: 820px) {
+        text-transform: unset;
+    }
+
+    @media (min-width: 2560px) {
+        font-size: 58px;
+    }
+}
+
+.btn {
+    width: 100%;
+    background: $secondary-color-first;
+    color: $text-first-color;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 12px;
+    padding: 12px 16px;
+    font-size: 18px;
+    transition: .4s;
+
+    &:hover {
+        background: #997301;
+        color: $white-bg;
+    }
+
+    &:active {
+         background: #4C3900;
+    }
+}
+
+.breadcrump {
+    margin-bottom: 50px;
+
+    &-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 22px;
+    }
+    
+    &-link {
+        position: relative;
+        @include fontAdaptive(18, 14);
+        color: $text-first-color;
+        transition: .4s;
+
+        @media (min-width: 2560px) {
+            font-size: 18px;
+        }
+
+        &:not(.breadcrump-current):hover {
+            text-decoration: underline;
+        }
+
+        &:not(.breadcrump-current)::after {
+            content: ">";
+            position: absolute;
+            right: -15px;
+            top: 0;
+            color: $text-second-color;
+        }
+    }
+
+    &-current {
+        color: $text-second-color;
+    }
+}
+
+// pagination
+
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    gap: 5px;
+}
+
+.back-button {
+    margin-right: 30px;
+    width: unset !important;
+    @media (max-width: 480px) {
+        display: none;
+    }
+}
+
+.next-button {
+    margin-left: 30px;
+    width: unset !important;
+    @media (max-width: 480px) {
+        display: none;
+    }
+}
+
+.paginate-buttons {
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    width: 50px;
+    height: 55px;
+
+    @media (max-width: 480px) {
+        width: 38px;
+        height: 40px;
+    }
+}
+
+.active-page {
+    background: url(https://generalamcentgroup.netlify.app/assets/paginationActive.svg) center center / cover no-repeat;
+}
+
+.number-buttons {
+    font-size: 18px;
+}
+
+// pagination

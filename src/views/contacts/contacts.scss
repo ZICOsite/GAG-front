@@ -1,0 +1,94 @@
+.contacts {
+    padding: 50px 0 100px;
+    background: $grey-bg;
+
+    &__content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+        gap: 24px 50px;
+
+        &-desc {
+            background: $white-bg;
+            border-radius: 8px;
+            padding: 0 30px;
+            max-height: 620px;
+            overflow-y: auto;
+        }
+        
+        &-col {
+            padding: 24px 0;
+
+            &:not(:last-of-type) {
+                border-bottom: 1px solid $text-forth-color;
+            }
+
+            &:nth-of-type(2) {
+                .contacts__content-list {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                    gap: 24px;
+                }
+            }
+        }
+
+        &-title {
+            max-width: 384px;
+            width: 100%;
+            margin-bottom: 30px;
+            color: #0D0E14;
+            @include fontAdaptive(32, 18);
+
+            @media (min-width: 2560px) {
+                font-size: 32px;
+            }
+        }
+
+        &-list {
+            display: grid;
+            row-gap: 24px;
+        }
+
+        &-link {
+            @include fontAdaptive(18, 16);
+            color: #3e434c;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            transition: 0.4s;
+
+            svg {
+                flex-shrink: 0;
+            }
+
+            &:hover {
+                color: $secondary-color-first;
+            }
+
+            @media (min-width: 2560px) {
+                font-size: 18px;
+            }
+        }
+
+        &-link[href="mailto:info@gmail.com"] {
+            font-weight: 500;
+        }
+
+        &-address {
+            max-width: 386px;
+            width: 100%;
+        }
+
+        &-address, &-number {
+            display: grid;
+            gap: 5px;
+
+            span {
+                font-weight: 500;
+            }
+        }
+
+        iframe {
+            min-height: 300px;
+        }
+    }
+}

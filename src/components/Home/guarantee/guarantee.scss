@@ -1,0 +1,105 @@
+.guarantee {
+    padding: 100px 0 110px;
+
+    @media (max-width: 1150px) {
+        padding: 28px 0 40px;
+    }
+
+    &__title {
+        margin-bottom: 50px;
+    }
+
+    &__cards {
+        display: flex;
+        justify-content: space-between;
+        gap: 104px 113px;
+        flex-wrap: wrap;
+
+        @media (max-width: 1150px) {
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+        }
+
+        @media (max-width: 414px) {
+            gap: 40px;
+        }
+    }
+
+    &__card {
+        max-width: 300px;
+        width: 100%;
+
+        @media (max-width: 1150px) {
+            flex-shrink: 0;
+            scroll-snap-align: center;
+        }
+
+        &:not(:last-of-type) {
+            .guarantee__card-line {
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                &::after {
+                    content: url(../../../../src/assets/images/guarantee/arrow.svg);
+                    transform: translateX(50px);
+
+                    @media (max-width: 1390px) {
+                        transform: translateX(0);
+                    }
+                }
+            }
+        }
+
+        &:first-of-type {
+            .guarantee__card-line {
+                &::after {
+                    content: url(../../../../src/assets/images/guarantee/arrowFirst.svg);
+                    transform: translate(50px, 6px);
+                    @media (max-width: 1390px) {
+                        transform: translate(0, 6px);
+                    }
+                }
+            }
+        }
+
+        &:nth-last-of-type(2) {
+            .guarantee__card-line {
+                &::after {
+                    content: url(../../../../src/assets/images/guarantee/arrowLast.svg);
+                    transform: translate(50px, 6px);
+                    @media (max-width: 1390px) {
+                        transform: translate(0, 6px);
+                    }
+                }
+            }
+        }
+
+        &-line {
+            margin-bottom: 16px;
+        }
+
+        &-title {
+            color: $text-first-color;
+            @include fontAdaptive(22, 18);
+            line-height: 120%;
+            margin-bottom: 7px;
+
+            @media (min-width: 2560px) {
+                font-size: 22px;
+            }
+        }
+
+        &-txt {
+            color: $text-second-color;
+            @include fontAdaptive(18, 14);
+            line-height: 140%;
+
+            @media (min-width: 2560px) {
+                font-size: 18px;
+            }
+        }
+    }
+}

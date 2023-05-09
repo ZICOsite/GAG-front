@@ -1,0 +1,312 @@
+.catalog {
+    padding: 50px 0 100px;
+
+    @media (max-width: 1150px) {
+        padding: 30px 0 60px;
+    }
+
+    &__title {
+        margin-bottom: 50px;
+    }
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 24px;
+        position: relative;
+
+        @media (max-width: 1147px) {
+            flex-wrap: wrap-reverse;
+        }
+    }
+
+    &__sidebar {
+        max-width: 384px;
+        width: 100%;
+        display: grid;
+        row-gap: 100px;
+
+        &-btn {
+            width: max-content;
+            background: $primary-color-first;
+            color: #fff;
+            transition: 0.4s;
+
+            &:hover {
+                background: $btn-hover;
+            }
+            
+            &:active {
+                background: $btn-active;
+            }
+        }
+    }
+
+    &__category {
+
+        &-title {
+            font-size: 24px;
+            margin-bottom: 16px;
+            color: $text-first-color;
+        }
+        
+        &-tags {
+            display: grid;
+            row-gap: 12px;
+            margin-bottom: 32px;
+        }
+
+        &-name {
+            display: flex;
+            justify-content: space-between;
+            gap: 8px;
+            align-items: center;
+            padding: 5px 0;
+            cursor: pointer;
+            @include fontAdaptive(16, 14);
+            color: $text-first-color;
+
+            @media (min-width: 2560px) {
+                font-size: 16px;
+            }
+
+            @media (max-width: 414px) {
+                padding: 8px;
+                gap: 8px;
+            }
+
+            svg {
+                margin-left: auto;
+                transition: .2s;
+
+                &.rotate {
+                    transform: rotate(45deg);
+                }
+            }
+        }
+
+        &-body {
+            padding-left: 30px;
+            display: grid;
+            row-gap: 8px;
+
+            &.invisible {
+                visibility: hidden;
+                opacity: 0;
+                height: 0;
+                transition: opacity 0.3s, height 0.3s, visibility 0.3s;
+            }
+            
+            &.visible {
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+
+        &-subcategory {
+            padding: 5px 0;
+        }
+
+        &-subcategoryLink {
+            color: $text-second-color;
+            @include fontAdaptive(16, 14);
+
+            @media (min-width: 2560px) {
+                font-size: 16px;
+            }
+        }
+    }
+
+    &__cards {
+        max-width: 792px;
+        width: 100%;
+
+        @media (max-width: 1147px) {
+            max-width: unset;
+        }
+
+        &-info {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            align-items: center;
+            margin-bottom: 18px;
+        }
+
+        &-view {
+            display: flex;
+            gap: 24px;
+
+            @media (max-width: 480px) {
+                display: none;
+            }
+        }
+
+        &-grid, &-burger {
+            cursor: pointer;
+
+            rect, path {
+                transition: 0.2s;
+            }
+        }
+    }
+
+    &__results {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(255px, 256px));
+        gap: 12px;
+
+        @media (max-width: 1147px) {
+            grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+        }
+    }
+
+    &__info {
+        max-width: 308px;
+        width: 100%;
+        border-radius: 10px;
+        padding: 30px;
+        background: $secondary-color-second;
+        display: grid;
+        position: sticky;
+        top: 100px;
+
+        @media (max-width: 576px) {
+            max-width: unset;
+        }
+
+        &-title {
+            width: 200px;
+            @include fontAdaptive(24, 18);
+            margin: 0 auto 6px;
+            color: $text-first-color;
+            text-align: center;
+
+            @media (min-width: 2560px) {
+                font-size: 24px;
+            }
+        }
+
+        &-subtitle {
+            color: $text-first-color;
+            opacity: 0.8;
+            text-align: center;
+            margin-bottom: 25px;
+            @include fontAdaptive(16, 14);
+
+            @media (min-width: 2560px) {
+                font-size: 16px;
+            }
+        }
+
+        &-tel {
+            display: flex;
+            align-items: flex-start;
+            color: $text-first-color;
+            gap: 10px;
+            width: 200px;
+            margin: 0 auto 25px;
+        }
+        
+        &-number {
+            display: grid;
+            gap: 5px;
+            font-weight: 500;
+            @include fontAdaptive(18, 16);
+    
+            @media (min-width: 2560px) {
+                font-size: 18px;
+            }
+
+            span {
+                font-weight: 400;
+                font-size: 16px;
+            }
+        }
+
+        &-socialsMedia {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            margin-bottom: 25px;
+        }
+
+        &-mail {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: $text-first-color;
+            gap: 13px;
+            font-weight: 500;
+
+            @include fontAdaptive(18, 16);
+    
+            @media (min-width: 2560px) {
+                font-size: 18px;
+            }
+        }
+    }
+
+    &__paginate {
+        grid-column: 3 span;
+
+        @media (max-width: 1147px) {
+            grid-column: 4 span;
+        }
+
+        @media (max-width: 1080px) {
+            grid-column: 3 span;
+        }
+
+        @media (max-width: 820px) {
+            grid-column: 2 span;
+        }
+
+        @media (max-width: 540px) {
+            grid-column: 1 span;
+        }
+    }
+}
+
+._list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+
+    
+    .results__card {
+        display: flex;
+        align-items: center;
+
+        @media (max-width: 480px) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        &-image {
+            max-width: 204px;
+            width: 100%;
+
+            @media (max-width: 480px) {
+                max-width: unset;
+            }
+        }
+
+        &-title {
+            margin-bottom: 24px;
+
+            @media (max-width: 768px) {
+                margin-bottom: 10px;
+            }
+        }
+
+        &-details {
+            grid-template-columns: repeat(2, 248px);
+
+            @media (max-width: 768px) {
+                grid-template-columns: unset;
+            }
+        }
+    }
+}

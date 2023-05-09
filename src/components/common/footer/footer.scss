@@ -1,0 +1,184 @@
+.footer {
+    padding: 60px 0;
+    border: 1px solid $grey-bg;
+
+    .container {
+        position: relative;
+    }
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 24px 16px;
+        margin-bottom: 60px;
+    }
+
+    &__col {
+        max-width: 400px;
+        // width: 100%;
+
+        &-title {
+            color: #0d0e14;
+            @include fontAdaptive(32, 24);
+            line-height: 120%;
+            margin-bottom: 30px;
+
+            @media (max-width: 576px) {
+                margin-bottom: 16px;
+            }
+
+            @media (min-width: 2560px) {
+                font-size: 32px;
+            }
+        }
+
+        &-list {
+            display: grid;
+            gap: 24px;
+        }
+
+        &-lists {
+            display: flex;
+            gap: 24px 44px;
+
+            @media (max-width: 667px) {
+                flex-wrap: wrap;
+            }
+        }
+
+        &-link {
+            @include fontAdaptive(18, 16);
+            color: #3e434c;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            transition: 0.4s;
+
+            &:hover {
+                color: $secondary-color-first;
+            }
+
+            @media (min-width: 2560px) {
+                font-size: 18px;
+            }
+        }
+
+        &-link[href="mailto:info@gmail.com"] {
+            font-weight: 500;
+        }
+
+        &-desc {
+            display: grid;
+            gap: 5px;
+
+            span {
+                font-weight: 500;
+            }
+        }
+    }
+
+    &__bottom {
+        display: flex;
+        align-items: flex-end;
+        flex-wrap: wrap;
+        gap: 24px 60px;
+
+        &-txt {
+            max-width: 256px;
+            width: 100%;
+            @include fontAdaptive(18, 16);
+            color: $primary-color-first;
+
+            @media (min-width: 2560px) {
+                font-size: 18px;
+            }
+        }
+    }
+
+    &__box {
+        max-width: 256px;
+        width: 100%;
+
+        &-txt {
+            display: grid;
+            gap: 5px;
+        }
+    }
+
+    &__logo {
+        display: inline-block;
+        margin-bottom: 25px;
+    }
+
+    &__socials {
+        display: flex;
+        gap: 30px;
+        margin-bottom: 30px;
+
+        &-link {
+            display: inline-flex;
+            
+            path {
+                transition: 0.4s;
+            }
+            &:hover path:first-of-type {
+                fill: $primary-color-first;
+            }
+
+            &:hover path:last-of-type {
+                fill: $white-bg;
+            }
+
+            &._instagram {
+                &:hover path:nth-of-type(2) {
+                    fill: $white-bg;
+                }
+                &:hover path:nth-of-type(3) {
+                    stroke: $btn-hover;
+                }
+                &:hover path:last-of-type {
+                    stroke: $btn-hover;
+                }
+            }
+        }
+    }
+
+    &__up {
+        position: absolute;
+        bottom: 0;
+        right: 12px;
+
+        @media (max-width: 414px) {
+            svg {
+                width: 50px;
+                height: 58px;
+            }
+        }
+
+        svg,
+        path {
+            transition: .1s;
+        }
+
+        &:hover svg {
+            fill: $btn-hover;
+        }
+
+        &:active svg {
+            fill: $btn-active;
+        }
+
+        &:hover path:first-of-type {
+            stroke: $btn-hover;
+        }
+
+        &:active path:first-of-type {
+            stroke: $btn-active;
+        }
+
+        &:hover path:last-of-type {
+            stroke: $white-bg;
+        }
+    }
+}

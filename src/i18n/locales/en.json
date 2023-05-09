@@ -1,0 +1,232 @@
+{
+    "locale": {
+        "en": "ENG",
+        "ru": "RUS"
+    },
+    "breadcrumb": {
+        "Home": "Home",
+        "news": "News",
+        "vacancies": "Vacancies",
+        "contacts": "Contacts",
+        "expanding": "We are expanding...",
+        "direction": "Main directions...",
+        "delivery": "All completed deliveries of the company",
+        "search": "Search"
+    },
+    "hotline": "Hotline",
+    "cooperation": "For cooperation",
+    "office": "Office in Tashkent",
+    "office2": "Office in Kazakhstan",
+    "dirPages": [
+        "Shut-off and control valves",
+        "Block-module equipment",
+        "Drilling rigs",
+        "Spare parts kits for equipmen"
+    ],
+    "dirPages2": [
+        "Pump stations",
+        "Instrumentation and automation equipment",
+        "Tools and accessories"
+    ],
+    "nav": {
+        "catalog": "Destination catalog",
+        "company": "About us",
+        "news": "News",
+        "vacansies": "Vacancies",
+        "contacts": "Contacts"
+    },
+    "download": "Download catalog",
+    "thesis": {
+        "info-one": "Successful deliveries for 2022",
+        "info-two": "And more goods and services",
+        "info-three": "And more satisfied huge partner-companies"
+    },
+    "guarantee": {
+        "title": {
+            "one": "What we ",
+            "two": "offer and guarantee ",
+            "three": "to our customers"
+        },
+        "cards": [
+            {
+                "title": "Order a product/service",
+                "text": "Contact our manager, discuss the order details"
+            },
+            {
+                "title": "We prepare documents",
+                "text": "Approval of technical parameters, development of design documentation and detailed documentation, provision for approval and receipt of a stamp for production"
+            },
+            {
+                "title": "Monitoring of all processes",
+                "text": "Monitoring of all production processes, acceptance of raw materials and materials"
+            },
+            {
+                "title": "Preparing for delivery",
+                "text": "We prepare and conduct pre-shipment tests of goods and equipment"
+            },
+            {
+                "title": "We deliver across the Republic of Uzbekistan",
+                "text": "After inspection and agreement with the client, we deliver the special. machinery, goods and equipment throughout the Republic of Uzbekistan"
+            },
+            {
+                "title": "You receive an order",
+                "text": "Specialist. machinery, goods or equipment is delivered to your company"
+            }
+        ]
+    },
+    "brand": {
+        "title": {
+            "one": "Large choice ",
+            "two": "of brands and manufacturers"
+        }
+    },
+    "company": {
+        "title": {
+            "one": "Company's",
+            "two": "main",
+            "three": "directions"
+        },
+        "allServicesLink": {
+            "txt1": "Skip to",
+            "txt2": "all services"
+        },
+        "help": {
+            "title": "Didn't find the right product?",
+            "txt": "Contact our manager in a convenient way for you"
+        }
+    },
+    "info": {
+        "title": "For 4 years on the market, we have become the largest distributors of the industrial sector of the country",
+        "txt1": "The company was founded in 2018 and is one of the largest in Uzbekistan, not only a supplier shut-off and control valves, but also many industrial products and services.",
+        "desc": {
+            "txt1": "",
+            "txt2": "General Amcent Group Ltd.",
+            "txt3": "always pays special attention to product quality and corporate reputation, adheres to a quality survival policy, and closely monitors the ordering and delivery process."
+        },
+        "cards": {
+            "txt1": "Founding year",
+            "txt2": "Warehouses in the region",
+            "txt3": "Qualified employees"
+        },
+        "delivery": "Delivered products"
+    },
+    "advantages": {
+        "title": {
+            "one": "Our",
+            "two": "benefits"
+        },
+        "cards": [
+            {
+                "title": "Individual approach to each customer",
+                "text": "We start by knowing our customers' goals and expectations and use that information to tailor our services and products to meet their needs"
+            },
+            {
+                "title": "Well-established work on the passage of all stages",
+                "text": "At {company}, we have implemented a streamlined process that ensures a seamless experience from start to finish"
+            },
+            {
+                "title": "24 hours a day, 7 days a week in touch with clients",
+                "text": "We offer 24/7 customer support, so you can contact us any time of the day or night"
+            },
+            {
+                "title": "Favorable cooperation conditions",
+                "text": "We understand that building successful partnerships with our clients is essential to achieving mutually beneficial outcomes"
+            },
+            {
+                "title": "Quality assurance of services and goods",
+                "text": "We are committed to providing our customers with the best possible service and we believe that our quality and service assurance is an important part of achieving this goal"
+            },
+            {
+                "title": "Huge range of products and services from market leaders",
+                "text": "We offer a wide range of products and services from market leaders to ensure that our customers have access to the most advanced and reliable solutions on the market"
+            }
+        ]
+    },
+    "partners": {
+        "title": {
+            "one": "We are",
+            "two": "trusted by more than 10 large companies"
+        },
+        "txt": "More than 10 large companies in the industry trust us and have not regretted it so far. We work with market leaders, advanced companies and professionals. Dozens of successfully completed projects on time and hundreds of satisfied people speak for our company."
+    },
+    "delivery": {
+        "title": {
+            "one": "Successfully completed",
+            "two": "deliveries in 2022"
+        },
+        "title2": {
+            "one": "ALL",
+            "two": "COMPLETED DELIVERY",
+            "three": "OF THE COMPANY"
+        },
+        "list": {
+            "data": "Date",
+            "direction": "Direction",
+            "product": "Product",
+            "count": "Count",
+            "customer": "Customer"
+        },
+        "all": "View all deliveries"
+    },
+    "news": {
+        "title": {
+            "one": "Our",
+            "two": "Company News"
+        },
+        "title2": "News",
+        "count": "Total news",
+        "more": "Read article",
+        "all": "Go to all news",
+        "success": "Successfully delivered products",
+        "author": "Author"
+    },
+    "contacts": {
+        "title": "Central offices of the company in the regions",
+        "region": "For another region"
+    },
+    "catalog": {
+        "info_title": "Categories",
+        "count": "goods and services",
+        "desc": {
+            "manufacturer": "Manufacturer",
+            "diameter": "Diameter",
+            "model": "Model",
+            "pressure": "Pressure"
+        },
+        "download": "Download service catalog"
+    },
+    "vacancies": {
+        "title": {
+            "one": "COMPANY",
+            "two": "VACANCIES"
+        }
+    },
+    "search": {
+        "title": {
+            "one": "Searching",
+            "two": "results"
+        },
+        "txt": {
+            "success": {
+                "one": "On request",
+                "two": "total results:"
+            },
+            "error": {
+                "one": "Unfortunately, there is no such product",
+                "two": "on the site, try to describe it in a different way or go to the"
+            }
+        }
+    },
+    "details": {
+        "characteristic": "Characteristic",
+        "call": "Get product price"
+    },
+    "footer": {
+        "site": "Site",
+        "direction": "Main directions",
+        "contacts": "Contact information",
+        "location": "Uzbekistan, Tashkent, st. Pushkinskaya, 99A 8:00 - 22:00 Mon-Fri",
+        "rights": "All rights reserved. Copying information is punishable by the law of the Republic of Uzbekistan",
+        "policy": "Personal data processing policy"
+    }
+}

@@ -1,0 +1,121 @@
+.brand {
+    padding: 0 0 86px;
+
+    @media (max-width: 1150px) {
+        padding: 0 0 60px;
+    }
+
+    &__title {
+        margin-bottom: 50px;
+    }
+
+    &__category {
+        &-title {
+            font-size: 24px;
+            margin-bottom: 16px;
+            color: $text-first-color;
+        }
+
+        &-manufacturers {
+            display: flex;
+            align-items: flex-start;
+            gap: 18px;
+        }
+
+        &-tags {
+            display: grid;
+            row-gap: 12px;
+            max-width: 384px;
+            width: 100%;
+
+            @media (max-width: 1024px) {
+                max-width: unset;
+            }
+        }
+
+        &-name {
+            display: flex;
+            justify-content: space-between;
+            gap: 8px;
+            align-items: center;
+            padding: 5px 0;
+            cursor: pointer;
+            @include fontAdaptive(16, 14);
+            color: $text-first-color;
+
+            @media (min-width: 2560px) {
+                font-size: 16px;
+            }
+
+            @media (max-width: 414px) {
+                padding: 8px;
+                gap: 8px;
+            }
+
+            svg {
+                margin-left: auto;
+                transition: 0.2s;
+
+                &.rotate {
+                    transform: rotate(45deg);
+                }
+            }
+        }
+
+        &-logos {
+            max-width: 792px;
+            width: 100%;
+
+            @media (max-width: 1024px) {
+                display: none;
+            }
+        }
+
+        &-body {
+            display: grid;
+            row-gap: 8px;
+
+            &.invisible {
+                visibility: hidden;
+                opacity: 0;
+                height: 0;
+                transition: opacity 0.3s, height 0.3s, visibility 0.3s;
+            }
+
+            &.visible {
+                max-height: 450px;
+                overflow: auto;
+                visibility: visible;
+                opacity: 1;
+
+                @media (max-width: 1024px) {
+                    height: 130px !important;
+                }
+            }
+        }
+
+        &-subcategory {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+
+            @media (max-width: 1024px) {
+                flex-wrap: nowrap;
+                overflow: auto;
+                padding: 3px 0;
+            }
+
+            img {
+                max-width: 177px;
+                width: 100%;
+                object-fit: contain;
+                border: 1px solid $grey-bg;
+                border-radius: 5px;
+
+                @media (max-width: 1024px) {
+                    max-width: 150px;
+                }
+            }
+        }
+    }
+}

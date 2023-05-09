@@ -1,0 +1,102 @@
+.search {
+    padding: 50px 0 100px;
+
+    @media (max-width: 1150px) {
+        padding: 36px 0 60px;
+    }
+
+    &__title {
+        margin-bottom: 16px;
+    }
+
+    &__txt {
+        color: $text-second-color;
+        font-size: 18px;
+        line-height: 140%;
+        max-width: 792px;
+        width: 100%;
+        margin-bottom: 50px;
+
+        &._error {
+            margin-bottom: 75px;
+        }
+    }
+}
+
+.results {
+    &__cards {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 32px;
+
+        @media (max-width: 1240px) {
+            grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+        }
+    }
+
+    &__card {
+        display: grid;
+        gap: 12px 24px;
+        padding: 10px 8px;
+        border: 1.5px solid $text-forth-color;
+        background: $white-bg;
+        border-radius: 8px;
+        transition: 0.4s;
+
+        &:hover {
+            background: $primary-color-first;
+
+            * {
+                color: $white-bg;
+            }
+
+            .results__card-image {
+                background: #698fd1;
+            }
+        }
+
+        &-image {
+            background: $grey-bg;
+            border-radius: 5px;
+            text-align: center;
+            transition: 0.2s;
+        }
+
+        &-img {
+            width: 100%;
+            object-fit: cover;
+            max-height: 280px;
+            min-height: 280px;
+        }
+
+        &-title {
+            font-weight: 500;
+            @include fontAdaptive(18, 16);
+            line-height: 120%;
+            color: $text-first-color;
+            margin-bottom: 10px;
+
+            @media (min-width: 2560px) {
+                font-size: 18px;
+            }
+        }
+
+        &-details {
+            display: grid;
+            row-gap: 10px;
+        }
+
+        &-txt {
+            color: #3e434c;
+            @include fontAdaptive(16, 14);
+
+            @media (min-width: 2560px) {
+                font-size: 14px;
+            }
+
+            span {
+                color: $text-second-color;
+            }
+        }
+    }
+}

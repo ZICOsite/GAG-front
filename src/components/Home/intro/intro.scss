@@ -1,0 +1,157 @@
+.intro {
+    position: relative;
+
+    &__slide {
+        position: relative;
+        z-index: 1;
+        min-height: 600px;
+        max-height: 600px;
+        display: flex;
+        padding: 102px 0;
+
+        &-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        &-title {
+            max-width: 1020px;
+            width: 100%;
+            color: $white-bg;
+            @include fontAdaptive(58, 30);
+            line-height: 120%;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+
+            @media (min-width: 2560px) {
+                font-size: 58px;
+            }
+        }
+
+        &-txt {
+            max-width: 927px;
+            width: 100%;
+            color: $text-forth-color;
+            @include fontAdaptive(18, 14);
+            line-height: 140%;
+
+            @media (min-width: 2560px) {
+                font-size: 18px;
+            }
+        }
+    }
+
+    &__extra {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: absolute;
+        z-index: 1;
+        max-width: 1200px;
+        width: 100%;
+        top: 70%;
+        margin: 0 -12px;
+        padding: 0 12px;
+
+        @media (max-width: 480px) {
+            top: 82%;
+        }
+    }
+
+    &__file {
+        display: flex;
+        align-items: center;
+        color: $text-forth-color;
+        max-width: 242px;
+        width: 100%;
+        gap: 20px;
+        @include fontAdaptive(18, 14);
+        transition: 0.4s;
+
+        &:hover {
+            color: $white-bg;
+        }
+
+        @media (min-width: 2560px) {
+            font-size: 18px;
+        }
+
+        svg {
+            flex-shrink: 0;
+            transition: 0.1s;
+
+            @media (max-width: 480px) {
+                width: 50px;
+                height: 58px;
+            }
+        }
+
+        path {
+            transition: 0.1s;
+        }
+
+        &:hover {
+            svg {
+                fill: $white-bg;
+            }
+
+            path:nth-of-type(2) {
+                fill: $text-first-color;
+                stroke: $text-first-color;
+            }
+            path:nth-of-type(3) {
+                fill: $white-bg;
+            }
+
+            path:nth-of-type(4) {
+                stroke: $white-bg;
+            }
+        }
+    }
+
+    &__navgiation {
+        max-width: 160px;
+        width: 100%;
+
+        @media (max-width: 480px) {
+            width: max-content;
+        }
+    }
+
+    &__controllers {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-bottom: 13px;
+
+        @media (max-width: 480px) {
+            justify-content: center;
+        }
+
+        &-prev,
+        &-next {
+            cursor: pointer;
+
+            @media (max-width: 480px) {
+                display: none;
+            }
+        }
+    }
+
+    &__pagination {
+        display: flex;
+        @include fontAdaptive(40, 28);
+        color: $white-bg;
+        line-height: 120%;
+
+        @media (min-width: 2560px) {
+            font-size: 40px;
+        }
+    }
+}

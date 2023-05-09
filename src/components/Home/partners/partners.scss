@@ -1,0 +1,85 @@
+.partners {
+    background: $grey-bg;
+    padding: 60px 0 92px;
+
+    @media (max-width: 1150px) {
+        padding: 36px 0;
+    }
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-bottom: 95px;
+        row-gap: 24px;
+
+        @media (max-width: 414px) {
+            margin-bottom: 36px;
+        }
+    }
+
+    &__title {
+        max-width: 657px;
+        width: 100%;
+
+        @media (max-width: 1199px) {
+            max-width: unset;
+        }
+    }
+
+    &__txt {
+        max-width: 519px;
+        width: 100%;
+        color: $text-second-color;
+        line-height: 135%;
+        @include fontAdaptive(18, 16);
+
+        @media (max-width: 1199px) {
+            max-width: unset;
+        }
+
+        @media (min-width: 2560px) {
+            font-size: 18px;
+        }
+    }
+
+    &__brand {
+        width: 15rem;
+        min-height: 128px;
+        max-height: 150px;
+        display: grid;
+        place-items: center;
+        margin: 0 40px;
+        background: #fff;
+    }
+}
+
+.marquee {
+    overflow: hidden;
+
+    &__wrapper {
+        display: flex;
+
+        &:hover {
+            .marquee__item {
+                animation-play-state: paused;
+            }
+        }
+    }
+
+    &__item {
+        display: flex;
+        animation: marquee 10s infinite linear;
+    }
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateZ(0);
+    }
+
+    to {
+        transform: translate3d(-100%, 0, 0);
+    }
+}
