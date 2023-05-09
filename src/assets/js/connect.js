@@ -17,7 +17,7 @@ export class Products {
             loading.value = false;
             return res.data;
         } catch (error) {
-            window.location = `http://185.196.213.137/api/v1/${lang}/error`;
+            // window.location = `http://185.196.213.137:5000/${lang}/error`;
             loading.value = false;
             console.log(`Cannot access to ${url}`, error);
             return error;
