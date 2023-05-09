@@ -1,7 +1,7 @@
 import axios from "axios";
 import { loading } from "@/static";
 
-const baseUrl = "http://185.196.213.137/api/v1";
+const baseUrl = "https://tubesolutions.killer152.repl.co/api/v1";
 
 let lang = localStorage.getItem("user-locale") || import.meta.env.VITE_DEFAULT_LOCALE;
 
@@ -17,7 +17,7 @@ export class Products {
             loading.value = false;
             return res.data;
         } catch (error) {
-            // window.location = `http://185.196.213.137:5000/${lang}/error`;
+            window.location = `http://185.196.213.137:5000/${lang}/error`;
             loading.value = false;
             console.log(`Cannot access to ${url}`, error);
             return error;
