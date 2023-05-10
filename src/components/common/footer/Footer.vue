@@ -4,6 +4,10 @@ import { RouterLink } from 'vue-router';
 import Tr from "@/i18n/translation";
 import { useMainDirections } from '@/stores/mainDirectionsStore';
 import { useI18n } from 'vue-i18n';
+import { Products } from "@/assets/js/connect";
+import { storeToRefs } from 'pinia';
+
+const db = new Products();
 
 const { locale } = useI18n();
 
@@ -17,6 +21,17 @@ const pages = ref([
 const zico = ref(new Date().getFullYear())
 
 const mainDirectionsStore = useMainDirections();
+const { getFiveProducts } = storeToRefs(mainDirectionsStore)
+
+const fixedNums = (num) => {
+    let emptyKey = num.split('');
+    let res;
+    for (let i = 0; i < emptyKey.length; i++) {
+        if (emptyKey[i] == " ") delete emptyKey[i];
+        res = emptyKey.join('');
+    }
+    return res;
+};
 
 onMounted(() => {
     mainDirectionsStore.getDirections();
@@ -42,7 +57,7 @@ onMounted(() => {
                     <h3 class="footer__col-title">{{ $t("footer.direction") }}</h3>
                     <div class="footer__col-lists">
                         <ul class="footer__col-list">
-                            <li v-for="(item, idx) in mainDirectionsStore?.products" :key="idx">
+                            <li v-for="(item, idx) in getFiveProducts(0, 7)" :key="idx">
                                 <RouterLink :to="`/${locale}/catalog/par_id=${item?.id}`" class="footer__col-link">{{
                                     item.title_ru || item.title_en }}</RouterLink>
                             </li>
@@ -53,27 +68,27 @@ onMounted(() => {
                     <h3 class="footer__col-title">{{ $t("footer.contacts") }}</h3>
                     <ul class="footer__col-list">
                         <li class="footer__col-item">
-                            <a href="tel:+998909999999" class="footer__col-link">
+                            <a :href="'tel:' + fixedNums(db.tel1)" class="footer__col-link">
                                 <img src="@/assets/images/footer/icon/Phone.svg" width="24" height="24" alt="">
                                 <div class="footer__col-desc">
-                                    <span>+998 90 999 99 99</span>
+                                    <span>{{ db.tel1 }}</span>
                                     {{ $t("hotline") }}
                                 </div>
                             </a>
                         </li>
                         <li class="footer__col-item">
-                            <a href="tel:+998909999999" class="footer__col-link">
+                            <a :href="'tel:' + fixedNums(db.tel2)" class="footer__col-link">
                                 <img src="@/assets/images/footer/icon/Phone.svg" width="24" height="24" alt="">
                                 <div class="footer__col-desc">
-                                    <span>+998 90 999 99 99</span>
+                                    <span>{{ db.tel2 }}</span>
                                     {{ $t("cooperation") }}
                                 </div>
                             </a>
                         </li>
                         <li class="footer__col-item">
-                            <a href="mailto:info@gmail.com" class="footer__col-link">
+                            <a :href="'mailto:' + db.email" class="footer__col-link">
                                 <img src="@/assets/images/footer/icon/Mail.svg" width="24" height="24" alt="">
-                                info@gmail.com
+                                {{ db.email }}
                             </a>
                         </li>
                         <li class="footer__col-item">
@@ -156,7 +171,7 @@ onMounted(() => {
                     </ul>
                     <p class="footer__box-txt">
                         <span>© 2022-{{ zico }}</span>
-                        ООО "General Amcent Group"
+                        {{ $t("footer.companyName") }} "General Amcent Group"
                     </p>
                 </div>
                 <p class="footer__bottom-txt">{{ $t("footer.rights") }}</p>

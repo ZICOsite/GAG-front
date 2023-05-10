@@ -1,7 +1,7 @@
 import axios from "axios";
 import { loading } from "@/static";
 
-const baseUrl = "https://tubesolutions.killer152.repl.co/api/v1";
+const baseUrl = "http://api.g-amcent.uz/api/v1";
 
 let lang = localStorage.getItem("user-locale") || import.meta.env.VITE_DEFAULT_LOCALE;
 
@@ -9,6 +9,10 @@ export class Products {
     constructor() {
         this.date = new Date().getFullYear();
         this.file = localStorage.getItem("file") || null;
+        this.tel1 = localStorage.getItem("tel1") || null;
+        this.tel2 = localStorage.getItem("tel2") || null;
+        this.tel3 = localStorage.getItem("tel3") || null;
+        this.email = localStorage.getItem("email") || null;
     }
     queries = async (url) => {
         loading.value = true;
@@ -17,7 +21,7 @@ export class Products {
             loading.value = false;
             return res.data;
         } catch (error) {
-            window.location = `http://185.196.213.137:5000/${lang}/error`;
+            window.location = `http://api.g-amcent.uz/${lang}/error`;
             loading.value = false;
             console.log(`Cannot access to ${url}`, error);
             return error;
@@ -35,4 +39,8 @@ export class Products {
     getDetails = (id) => this.queries(`${baseUrl}/product_detailpage/${id}/?lang=${lang}`)
     getBrands = () => this.queries(`${baseUrl}/company_logo/?lang=${lang}`)
     getFile = (file) => this.file = file;
+    getTel1 = (tel1) => this.tel1 = tel1;
+    getTel2 = (tel2) => this.tel2 = tel2;
+    getTel3 = (tel3) => this.tel3 = tel3;
+    getEmail = (email) => this.email = email;
 }

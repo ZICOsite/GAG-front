@@ -100,7 +100,7 @@
         "txt1": "The company was founded in 2018 and is one of the largest in Uzbekistan, not only a supplier shut-off and control valves, but also many industrial products and services.",
         "desc": {
             "txt1": "",
-            "txt2": "General Amcent Group Ltd.",
+            "txt2": "General Amcent Group LLC.",
             "txt3": "always pays special attention to product quality and corporate reputation, adheres to a quality survival policy, and closely monitors the ordering and delivery process."
         },
         "cards": {
@@ -227,6 +227,7 @@
         "contacts": "Contact information",
         "location": "Uzbekistan, Tashkent, st. Pushkinskaya, 99A 8:00 - 22:00 Mon-Fri",
         "rights": "All rights reserved. Copying information is punishable by the law of the Republic of Uzbekistan",
-        "policy": "Personal data processing policy"
+        "policy": "Personal data processing policy",
+        "companyName": "LLC"
     }
 }
