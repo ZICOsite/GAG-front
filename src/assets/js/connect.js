@@ -21,7 +21,7 @@ export class Products {
             loading.value = false;
             return res.data;
         } catch (error) {
-            window.location = `http://api.g-amcent.uz/${lang}/error`;
+            window.location = `http://g-amcent.uz/${lang}/error`;
             loading.value = false;
             console.log(`Cannot access to ${url}`, error);
             return error;

@@ -10,7 +10,6 @@ export const useDetailsStore = defineStore('details', {
         async getDetails(id) {
             try {
                 const detailsDB = await db.getDetails(id);
-                // console.log(detailsDB);
                 this.details = detailsDB;
             } catch (error) {
                 console.log(error);

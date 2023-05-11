@@ -64,7 +64,7 @@
 
         &-img {
             width: 100%;
-            object-fit: cover;
+            object-fit: contain;
             max-height: 280px;
             min-height: 280px;
         }
