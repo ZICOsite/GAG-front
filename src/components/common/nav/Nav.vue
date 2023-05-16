@@ -111,8 +111,8 @@ const pages = ref([
                             </RouterLink>
                         </li>
                         <li class="nav__item">
-                            <a href="#info" class="nav__link" v-if="route.name == 'Home'">{{ $t("nav.company") }}</a>
-                            <RouterLink :to="Tr.i18nRoute({name: 'company'})" class="nav__link" v-else>
+                            <a href="#info" class="nav__link" v-if="route.name == 'Home'" @click="closeMenuPanel">{{ $t("nav.company") }}</a>
+                            <RouterLink :to="Tr.i18nRoute({name: 'company'})" class="nav__link" @click="closeMenuPanel" v-else>
                                 {{ $t("nav.company") }}
                             </RouterLink>
                         </li>

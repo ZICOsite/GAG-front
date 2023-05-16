@@ -187,7 +187,7 @@ onMounted(async () => {
                                 </a>
                             </li>
                             <li class="catalog__info-item">
-                                <a href="#!" class="catalog__info-link _whatsapp">
+                                <a href="https://wa.me/+998999025406" target="_blank" class="catalog__info-link _whatsapp">
                                     <svg width="30" height="34" viewBox="0 0 30 34" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -221,7 +221,7 @@ onMounted(async () => {
                                 </a>
                             </li>
                             <li class="catalog__info-item">
-                                <a href="#!" class="catalog__info-link _telegram">
+                                <a href="https://t.me/axwell98" target="_blank" class="catalog__info-link _telegram">
                                     <svg width="30" height="34" viewBox="0 0 30 34" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path

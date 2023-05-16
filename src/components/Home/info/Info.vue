@@ -3,11 +3,11 @@
 </script>
 
 <template>
-    <section class="info" id="info">
+    <section class="info">
         <div class="container">
             <div class="info__content">
                 <div class="info__content-desc">
-                    <h3 class="info__content-title">{{ $t("info.title") }}</h3>
+                    <h3 class="info__content-title" id="info">{{ $t("info.title") }}</h3>
                     <p class="info__content-txt">{{ $t("info.txt1") }}</p>
                     <p class="info__content-txt">{{ $t("info.desc.txt1") }} <b>{{ $t("info.desc.txt2") }}</b> {{ $t("info.desc.txt3") }}</p>
                     <div class="info__content-cards">

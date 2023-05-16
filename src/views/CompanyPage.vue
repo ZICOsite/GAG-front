@@ -66,7 +66,7 @@ const fixedNums = (num) => {
                   </a>
                 </li>
                 <li class="company__help-item">
-                  <a href="#!" class="company__help-link _whatsapp">
+                  <a href="https://wa.me/+998999025406" target="_blank" class="company__help-link _whatsapp">
                     <svg width="30" height="34" viewBox="0 0 30 34" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path
                         d="M2.53494 7.06354C0.968273 7.95131 0 9.61293 0 11.4136V22.5864C0 24.3871 0.968275 26.0487 2.53494 26.9365L7.5 29.75L12.5349 32.6031C14.0641 33.4697 15.9359 33.4697 17.4651 32.6031L27.4651 26.9365C29.0317 26.0487 30 24.3871 30 22.5864V11.4136C30 9.61293 29.0317 7.95131 27.4651 7.06354L17.4651 1.39687C15.9359 0.530349 14.0641 0.53035 12.5349 1.39687L2.53494 7.06354Z"
@@ -96,7 +96,7 @@ const fixedNums = (num) => {
                   </a>
                 </li>
                 <li class="company__help-item">
-                  <a href="#!" class="company__help-link _telegram">
+                  <a href="https://t.me/axwell98" target="_blank" class="company__help-link _telegram">
                     <svg width="30" height="34" viewBox="0 0 30 34" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path
                         d="M2.53494 7.06354C0.968273 7.95131 0 9.61293 0 11.4136V22.5864C0 24.3871 0.968275 26.0487 2.53494 26.9365L7.5 29.75L12.5349 32.6031C14.0641 33.4697 15.9359 33.4697 17.4651 32.6031L27.4651 26.9365C29.0317 26.0487 30 24.3871 30 22.5864V11.4136C30 9.61293 29.0317 7.95131 27.4651 7.06354L17.4651 1.39687C15.9359 0.530349 14.0641 0.53035 12.5349 1.39687L2.53494 7.06354Z"
