@@ -49,7 +49,7 @@
         },
         "cards": [
             {
-                "title": "Order a product/service",
+                "title": "Ordering product/services",
                 "text": "Contact our manager, discuss the order details"
             },
             {
@@ -61,15 +61,15 @@
                 "text": "Monitoring of all production processes, acceptance of raw materials and materials"
             },
             {
-                "title": "Preparing for delivery",
+                "title": "Preparation for delivery",
                 "text": "We prepare and conduct pre-shipment tests of goods and equipment"
             },
             {
-                "title": "We deliver across the Republic of Uzbekistan",
+                "title": "Delivery across the Republic of Uzbekistan",
                 "text": "After inspection and agreement with the client, we deliver the special. machinery, goods and equipment throughout the Republic of Uzbekistan"
             },
             {
-                "title": "You receive an order",
+                "title": "Receiving an order",
                 "text": "Specialist. machinery, goods or equipment is delivered to your company"
             }
         ]
