@@ -36,7 +36,6 @@ const cards = ref([
       <h2 class="guarantee__title title">
         {{ $t("guarantee.title.one") }}
         <span>{{ $t("guarantee.title.two") }}</span>
-        {{ $t("guarantee.title.three") }}
       </h2>
       <div class="guarantee__cards">
         <div class="guarantee__card" v-for="(item, idx) in cards" :key="idx">

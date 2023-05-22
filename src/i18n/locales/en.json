@@ -17,17 +17,6 @@
     "cooperation": "For cooperation",
     "office": "Office in Tashkent",
     "office2": "Office in Kazakhstan",
-    "dirPages": [
-        "Shut-off and control valves",
-        "Block-module equipment",
-        "Drilling rigs",
-        "Spare parts kits for equipmen"
-    ],
-    "dirPages2": [
-        "Pump stations",
-        "Instrumentation and automation equipment",
-        "Tools and accessories"
-    ],
     "nav": {
         "catalog": "Destination catalog",
         "company": "About us",
@@ -43,9 +32,8 @@
     },
     "guarantee": {
         "title": {
-            "one": "What we ",
-            "two": "offer and guarantee ",
-            "three": "to our customers"
+            "one": "How we are ",
+            "two": "working"
         },
         "cards": [
             {
@@ -53,8 +41,8 @@
                 "text": "Contact our manager, discuss the order details"
             },
             {
-                "title": "We prepare documents",
-                "text": "Approval of technical parameters, development of design documentation and detailed documentation, provision for approval and receipt of a stamp for production"
+                "title": "Making an order",
+                "text": "List and acceptance of necessary documents for placing an order"
             },
             {
                 "title": "Monitoring of all processes",
@@ -62,15 +50,15 @@
             },
             {
                 "title": "Preparation for delivery",
-                "text": "We prepare and conduct pre-shipment tests of goods and equipment"
+                "text": "Pre-shipment tests before sending the order"
             },
             {
-                "title": "Delivery across the Republic of Uzbekistan",
-                "text": "After inspection and agreement with the client, we deliver the special. machinery, goods and equipment throughout the Republic of Uzbekistan"
+                "title": "Transportation",
+                "text": "Organization of transportation and delivery of cargo to the destination"
             },
             {
-                "title": "Receiving an order",
-                "text": "Specialist. machinery, goods or equipment is delivered to your company"
+                "title": "Transfer of cargo to the recipient",
+                "text": "Long-term and mutually beneficial cooperation"
             }
         ]
     },
