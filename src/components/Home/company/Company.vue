@@ -32,7 +32,7 @@ onMounted(() => {
             <h2 class="company__title title">{{ $t("company.title.one") }} <span>{{ $t("company.title.two") }}</span> {{
                 $t("company.title.three") }}</h2>
             <div class="company__cards">
-                <CompanyItem v-for="(item, idx) in getFiveProducts(start, end)" :key="item.id"
+                <CompanyItem v-for="(item, idx) in getFiveProducts(start, end)" :key="idx"
                     :product="item" />
                 <slot name="extra">
                     All services
