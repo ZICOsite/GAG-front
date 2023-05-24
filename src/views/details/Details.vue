@@ -21,6 +21,16 @@ const setThumbsSwiper = (swiper) => {
     thumbsSwiper = swiper;
 }
 
+const fixedNums = (num) => {
+    let emptyKey = num.split('');
+    let res;
+    for (let i = 0; i < emptyKey.length; i++) {
+        if (emptyKey[i] == " ") delete emptyKey[i];
+        res = emptyKey.join('');
+    }
+    return res;
+};
+
 const db = new Products();
 
 onMounted(() => {
@@ -99,7 +109,7 @@ onMounted(() => {
                                     stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
                         </a>
-                        <a href="tel:+998909999999" class="details__product-btn btn">
+                        <a :href="'https://wa.me/' + fixedNums(db.tel1)" target="_blank" class="details__product-btn btn">
                             {{ $t("details.call") }}
                             <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <mask id="path-1-inside-1_1534_7411" fill="white">

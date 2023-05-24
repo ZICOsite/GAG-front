@@ -26,7 +26,9 @@ export const useMainDirections = defineStore('mainDirections', {
             return (id) => state.products[id].category.reduce((acc, item) => acc += item.child_count, 0)
         },
         getFiveProducts: (state) => (start, end) => {
-            return state.products.slice(start, end);
+            if (state.products) {
+                return state.products.slice(start, end);
+            }
         },
         getTitle: (state) => (id, id2) => {
             if(id && !id2) {

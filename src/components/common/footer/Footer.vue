@@ -20,20 +20,33 @@ const pages = ref([
 
 const zico = ref(new Date().getFullYear())
 
+const contactsInfo = ref(null);
+
 const mainDirectionsStore = useMainDirections();
 const { getFiveProducts } = storeToRefs(mainDirectionsStore)
 
-const fixedNums = (num) => {
-    let emptyKey = num.split('');
-    let res;
-    for (let i = 0; i < emptyKey.length; i++) {
-        if (emptyKey[i] == " ") delete emptyKey[i];
-        res = emptyKey.join('');
-    }
-    return res;
-};
+const fixedNums = ref(Function);
 
-onMounted(() => {
+onMounted(async () => {
+    try {
+        const res = await db.getContacts();
+        contactsInfo.value = res.results[0];
+        localStorage.setItem("tel1", contactsInfo.value.tel1);
+        localStorage.setItem("tel2", contactsInfo.value.tel2);
+        localStorage.setItem("tel3", contactsInfo.value.tel3);
+        localStorage.setItem("email", contactsInfo.value.email);
+        fixedNums.value = (num) => {
+            let emptyKey = num.split('');
+            let res;
+            for (let i = 0; i < emptyKey.length; i++) {
+                if (emptyKey[i] == " ") delete emptyKey[i];
+                res = emptyKey.join('');
+            }
+            return res;
+        }
+    } catch (error) {
+        console.log(error);
+    }
     mainDirectionsStore.getDirections();
 })
 
@@ -68,27 +81,27 @@ onMounted(() => {
                     <h3 class="footer__col-title">{{ $t("footer.contacts") }}</h3>
                     <ul class="footer__col-list">
                         <li class="footer__col-item">
-                            <a :href="'tel:' + fixedNums(db.tel1)" class="footer__col-link">
+                            <a :href="'tel:' + fixedNums(contactsInfo?.tel1)" class="footer__col-link">
                                 <img src="@/assets/images/footer/icon/Phone.svg" width="24" height="24" alt="">
                                 <div class="footer__col-desc">
-                                    <span>{{ db.tel1 }}</span>
+                                    <span>{{ contactsInfo?.tel1 }}</span>
                                     {{ $t("hotline") }}
                                 </div>
                             </a>
                         </li>
                         <li class="footer__col-item">
-                            <a :href="'tel:' + fixedNums(db.tel2)" class="footer__col-link">
+                            <a :href="'tel:' + fixedNums(contactsInfo?.tel2)" class="footer__col-link">
                                 <img src="@/assets/images/footer/icon/Phone.svg" width="24" height="24" alt="">
                                 <div class="footer__col-desc">
-                                    <span>{{ db.tel2 }}</span>
+                                    <span>{{ contactsInfo?.tel2 }}</span>
                                     {{ $t("cooperation") }}
                                 </div>
                             </a>
                         </li>
                         <li class="footer__col-item">
-                            <a :href="'mailto:' + db.email" class="footer__col-link">
+                            <a :href="'mailto:' + contactsInfo?.email" class="footer__col-link">
                                 <img src="@/assets/images/footer/icon/Mail.svg" width="24" height="24" alt="">
-                                {{ db.email }}
+                                {{ contactsInfo?.email }}
                             </a>
                         </li>
                         <li class="footer__col-item">
@@ -122,7 +135,8 @@ onMounted(() => {
                             </a>
                         </li>
                         <li class="footer__socials-item">
-                            <a href="https://wa.me/+998999025406" target="_blank" class="footer__socials-link _whatsapp">
+                            <a :href="'https://wa.me/' + fixedNums(contactsInfo?.tel1)" target="_blank"
+                                class="footer__socials-link _whatsapp">
                                 <svg width="30" height="34" viewBox="0 0 30 34" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path

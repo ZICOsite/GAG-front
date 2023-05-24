@@ -13,10 +13,6 @@ onMounted(async () => {
   try {
     const res = await db.getContacts();
     contactsInfo.value = res.results[0];
-    localStorage.setItem("tel1", contactsInfo.value.tel1);
-    localStorage.setItem("tel2", contactsInfo.value.tel2);
-    localStorage.setItem("tel3", contactsInfo.value.tel3);
-    localStorage.setItem("email", contactsInfo.value.email);
     fixedNums.value = (num) => {
       let emptyKey = num.split('');
       let res;
