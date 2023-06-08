@@ -79,6 +79,7 @@
             svg {
                 margin-left: auto;
                 transition: .2s;
+                flex-shrink: 0;
 
                 &.rotate {
                     transform: rotate(45deg);
